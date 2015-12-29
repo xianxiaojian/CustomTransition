@@ -15,6 +15,10 @@
 		3E0379501C32C59B00CC8F7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E03794E1C32C59B00CC8F7E /* LaunchScreen.storyboard */; };
 		3E03795B1C32C59B00CC8F7E /* CustomTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E03795A1C32C59B00CC8F7E /* CustomTransitionTests.m */; };
 		3E0379661C32C59B00CC8F7E /* CustomTransitionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0379651C32C59B00CC8F7E /* CustomTransitionUITests.m */; };
+		3E03797B1C32C5E800CC8F7E /* DismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0379741C32C5E800CC8F7E /* DismissAnimator.m */; };
+		3E03797C1C32C5E800CC8F7E /* DismissInteractiveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0379761C32C5E800CC8F7E /* DismissInteractiveAnimator.m */; };
+		3E03797D1C32C5E800CC8F7E /* PresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0379781C32C5E800CC8F7E /* PresentAnimator.m */; };
+		3E03797E1C32C5E800CC8F7E /* PresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E03797A1C32C5E800CC8F7E /* PresentedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		3E0379611C32C59B00CC8F7E /* CustomTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0379651C32C59B00CC8F7E /* CustomTransitionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionUITests.m; sourceTree = "<group>"; };
 		3E0379671C32C59B00CC8F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0379731C32C5E800CC8F7E /* DismissAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissAnimator.h; sourceTree = "<group>"; };
+		3E0379741C32C5E800CC8F7E /* DismissAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissAnimator.m; sourceTree = "<group>"; };
+		3E0379751C32C5E800CC8F7E /* DismissInteractiveAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissInteractiveAnimator.h; sourceTree = "<group>"; };
+		3E0379761C32C5E800CC8F7E /* DismissInteractiveAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissInteractiveAnimator.m; sourceTree = "<group>"; };
+		3E0379771C32C5E800CC8F7E /* PresentAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentAnimator.h; sourceTree = "<group>"; };
+		3E0379781C32C5E800CC8F7E /* PresentAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentAnimator.m; sourceTree = "<group>"; };
+		3E0379791C32C5E800CC8F7E /* PresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentedViewController.h; sourceTree = "<group>"; };
+		3E03797A1C32C5E800CC8F7E /* PresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,14 @@
 				3E0379441C32C59B00CC8F7E /* AppDelegate.m */,
 				3E0379461C32C59B00CC8F7E /* ViewController.h */,
 				3E0379471C32C59B00CC8F7E /* ViewController.m */,
+				3E0379731C32C5E800CC8F7E /* DismissAnimator.h */,
+				3E0379741C32C5E800CC8F7E /* DismissAnimator.m */,
+				3E0379751C32C5E800CC8F7E /* DismissInteractiveAnimator.h */,
+				3E0379761C32C5E800CC8F7E /* DismissInteractiveAnimator.m */,
+				3E0379771C32C5E800CC8F7E /* PresentAnimator.h */,
+				3E0379781C32C5E800CC8F7E /* PresentAnimator.m */,
+				3E0379791C32C5E800CC8F7E /* PresentedViewController.h */,
+				3E03797A1C32C5E800CC8F7E /* PresentedViewController.m */,
 				3E0379491C32C59B00CC8F7E /* Main.storyboard */,
 				3E03794C1C32C59B00CC8F7E /* Assets.xcassets */,
 				3E03794E1C32C59B00CC8F7E /* LaunchScreen.storyboard */,
@@ -207,7 +227,6 @@
 				TargetAttributes = {
 					3E03793C1C32C59B00CC8F7E = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = DNM872378K;
 					};
 					3E0379551C32C59B00CC8F7E = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -273,9 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E03797D1C32C5E800CC8F7E /* PresentAnimator.m in Sources */,
+				3E03797E1C32C5E800CC8F7E /* PresentedViewController.m in Sources */,
 				3E0379481C32C59B00CC8F7E /* ViewController.m in Sources */,
 				3E0379451C32C59B00CC8F7E /* AppDelegate.m in Sources */,
+				3E03797C1C32C5E800CC8F7E /* DismissInteractiveAnimator.m in Sources */,
 				3E0379421C32C59B00CC8F7E /* main.m in Sources */,
+				3E03797B1C32C5E800CC8F7E /* DismissAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CustomTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lin.CustomTransition;
@@ -425,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CustomTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lin.CustomTransition;
