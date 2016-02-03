@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DismissInteractiveAnimator : UIPercentDrivenInteractiveTransition
+@property (nonatomic, assign) BOOL interactive;
 - (void)addGestureRecognizerToViewController:(UIViewController *)viewController;
 @end

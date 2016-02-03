@@ -24,6 +24,7 @@
 - (void)pinchGestureRecognized:(UIPinchGestureRecognizer *)pinch{
     switch (pinch.state) {
         case UIGestureRecognizerStateBegan:{
+            self.interactive = YES;
             [self.presentingVC dismissViewControllerAnimated:YES completion:nil];
         }
             break;
@@ -37,10 +38,12 @@
         }
             break;
         case UIGestureRecognizerStateCancelled:{
+            self.interactive = NO;
             [self cancelInteractiveTransition];
         }
             break;
         case UIGestureRecognizerStateEnded:{
+            self.interactive = NO;
             if (self.completed) {
                 [self finishInteractiveTransition];
             }else{

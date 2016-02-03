@@ -50,6 +50,6 @@
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator{
-    return self.interactiveAnimator;
+    return self.interactiveAnimator.interactive ? self.interactiveAnimator : nil;
 }
 @end
