@@ -17,18 +17,13 @@ static const NSTimeInterval kDuration = 0.5;
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
 
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    NSLog(@"%@----%@",fromVC,toVC);
     
-    UIView *containerView = [transitionContext containerView];
-    NSLog(@"%@",containerView);
-    
-    [UIView animateWithDuration:kDuration delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:0 animations:^{
+    [UIView animateWithDuration:kDuration animations:^{
         fromVC.view.transform = CGAffineTransformMakeScale(0.01, 0.01);
         fromVC.view.alpha = 0.1;
     } completion:^(BOOL finished) {
-//        [fromVC.view removeFromSuperview];
-        [transitionContext completeTransition:YES];
+        //告诉系统过渡动画是完成还是取消
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 }
 @end

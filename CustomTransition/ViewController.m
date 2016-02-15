@@ -22,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    button.center = self.view.center;
     button.backgroundColor = [UIColor yellowColor];
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
@@ -30,6 +31,7 @@
 
 - (void)buttonClicked:(UIButton *)button{
     PresentedViewController *presentedVC = [[PresentedViewController alloc] init];
+    //设置过渡动画代理
     presentedVC.transitioningDelegate = self;
     //设置呈现控制器的模式为自定义，让你可以更改控制器的frame
     presentedVC.modalPresentationStyle = UIModalPresentationCustom;

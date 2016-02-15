@@ -10,7 +10,7 @@
 
 @interface DismissInteractiveAnimator ()
 @property (nonatomic,weak) UIViewController *presentingVC;
-//过渡动画是否完成
+/** 过渡动画是否完成 */
 @property (nonatomic, assign) BOOL completed;
 @end
 
@@ -29,12 +29,9 @@
         }
             break;
         case UIGestureRecognizerStateChanged:{
-//            NSLog(@"%f----%f",pinch.scale,pinch.velocity);
+            //更新过渡动画完成的百分比
             [self updateInteractiveTransition:1-pinch.scale];
-            if (pinch.scale < 0.8) {
-                self.completed = YES;
-            }
-            NSLog(@"%f----%f",pinch.scale,pinch.velocity);
+            self.completed = (pinch.scale < 0.5);
         }
             break;
         case UIGestureRecognizerStateCancelled:{
